@@ -1,10 +1,11 @@
-# subclip-sound-extractor
+# subclip-subtitle-transformer
 
 ## Description
 
-`subclip-sound-extractor` is a microservice designed to extract the audio from a video. It supports various video formats and generates a separate audio file as output, making it easier to process and analyze audio tracks independently of the video.
+`subclip-subtitle-transformer` is a microservice designed to convert subtitle files from SRT format to ASS format. It allows users to easily transform subtitles, preserving timing and text while adapting the file to a more feature-rich format, such as style customization and additional formatting options available in ASS.
 
 ## Features
 
-- **Audio extraction**: Extracts audio from a video in various formats (MP4, AVI, MKV, etc.).
-- **Multiple audio format support**: Generates audio files in WAV format, split into manageable parts.
+- **SRT to ASS conversion**: Converts subtitle files from SRT format to ASS (Advanced SubStation Alpha) format.
+- **Timing preservation**: Ensures that subtitle timings are preserved accurately during the transformation.
+- **Style support**: Transfers text styles from SRT to the customizable ASS format (such as fonts, colors, positions).
