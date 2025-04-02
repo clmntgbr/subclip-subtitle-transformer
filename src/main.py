@@ -39,7 +39,6 @@ celery.conf.update(
 @celery.task(name="tasks.process_message", queue=app.config["RMQ_QUEUE_READ"])
 def process_message(message):
     clip: Clip = ProtobufConverter.json_to_protobuf(message)
-    print(clip)
 
     try:
         id = clip.id

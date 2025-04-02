@@ -43,25 +43,26 @@ class ProtobufConverter:
 
         if "processedVideo" in clip_data:
             processed_video = Video()
-            processed_video.id = clip_data["originalVideo"]["id"]
-            processed_video.name = clip_data["originalVideo"]["name"]
-            processed_video.mimeType = clip_data["originalVideo"]["mimeType"]
-            processed_video.size = int(clip_data["originalVideo"]["size"])
+            processed_video.id = clip_data["processedVideo"]["id"]
+            processed_video.name = clip_data["processedVideo"]["name"]
+            processed_video.originalName = clip_data["processedVideo"]["originalName"]
+            processed_video.mimeType = clip_data["processedVideo"]["mimeType"]
+            processed_video.size = int(clip_data["processedVideo"]["size"])
 
-            if "length" in clip_data["originalVideo"]:
-                processed_video.length = int(clip_data["originalVideo"]["length"])
+            if "length" in clip_data["processedVideo"]:
+                processed_video.length = int(clip_data["processedVideo"]["length"])
 
-            if "audios" in clip_data["originalVideo"]:
-                processed_video.audios.extend(clip_data["originalVideo"]["audios"])
+            if "audios" in clip_data["processedVideo"]:
+                processed_video.audios.extend(clip_data["processedVideo"]["audios"])
 
-            if "subtitles" in clip_data["originalVideo"]:
-                processed_video.subtitles.extend(clip_data["originalVideo"]["subtitles"])
+            if "subtitles" in clip_data["processedVideo"]:
+                processed_video.subtitles.extend(clip_data["processedVideo"]["subtitles"])
 
-            if "ass" in clip_data["originalVideo"]:
-                processed_video.ass = clip_data["originalVideo"]["ass"]
+            if "ass" in clip_data["processedVideo"]:
+                processed_video.ass = clip_data["processedVideo"]["ass"]
 
-            if "subtitle" in clip_data["originalVideo"]:
-                processed_video.subtitle = clip_data["originalVideo"]["subtitle"]
+            if "subtitle" in clip_data["processedVideo"]:
+                processed_video.subtitle = clip_data["processedVideo"]["subtitle"]
             
             processed_video.IsInitialized()
             clip.processedVideo.CopyFrom(processed_video)
