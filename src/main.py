@@ -128,7 +128,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name,Fontname, Fontsize,PrimaryColour, SecondaryColour,OutlineColour, BackColour, Bold, Italic, Underline,StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default, {get_subtitle_font(configuration.subtitleFont)},{configuration.subtitleSize}, {convert_color(configuration.subtitleColor)}, {convert_color(configuration.subtitleColor)}, {convert_color(configuration.subtitleOutlineColor)},&H00000000, {configuration.subtitleBold}, {configuration.subtitleItalic},{configuration.subtitleUnderline}, 0, 100, 100, 0, 0,1, {configuration.subtitleOutlineThickness}, {1 if configuration.subtitleShadow != "NONE" else 0},2,10,10,10,0
+Style: Default, {get_subtitle_font(configuration.subtitleFont)},{configuration.subtitleSize}, {convert_color(configuration.subtitleColor)}, {convert_color(configuration.subtitleColor)}, {convert_color(configuration.subtitleOutlineColor)},&H00000000, {configuration.subtitleBold}, {configuration.subtitleItalic},{configuration.subtitleUnderline}, 0, 100, 100, 0, 0,1, {configuration.subtitleOutlineThickness}, {1 if configuration.subtitleShadow != "NONE" else 0},2,10,10,{configuration.marginV},0
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
